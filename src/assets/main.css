@@ -1,0 +1,74 @@
+@import "./base.css";
+
+#app {
+  max-width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid wheat;
+  font-weight: normal;
+}
+
+button {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--vt-c-indigo);
+  background-color: var(--vt-c-white-mute);
+  color: var(--vt-c-black-mute);
+  cursor: pointer;
+
+  transition: 0.1s;
+
+  &:hover {
+    background-color: var(--vt-c-text-dark-2);
+    color: var(--vt-c-white-mute);
+  }
+
+  &:active {
+    background-color: var(--vt-c-indigo);
+    color: var(--vt-c-white-mute);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  border: 1px solid hsla(160, 100%, 37%, 0.2);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--vt-c-indigo);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    width: 50%;
+    text-align: center;
+
+    input {
+      margin: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid var(--vt-c-indigo);
+      background-color: var(--vt-c-indigo);
+      color: var(--vt-c-white-soft);
+    }
+  }
+}
