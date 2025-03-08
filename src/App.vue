@@ -59,7 +59,6 @@ function handleLogOut() {
 
 <style scoped lang="scss">
 header {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
