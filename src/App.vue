@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView, useRouter } from "vue-router"
-import { ref, onMounted, computed } from "vue"
+import { onMounted, computed } from "vue"
 import { getAuth, onAuthStateChanged } from "firebase/auth"
 import { useAuthStore } from "./stores/auth.js"
 import { logOut } from "./services/authServices.js"
@@ -9,7 +9,6 @@ const router = useRouter()
 const authStore = useAuthStore()
 const isLoggedIn = computed(() => authStore.isLoggedIn)
 
-let auth
 onMounted(() => {
   onAuthStateChanged(getAuth(), (user) => {
     if (user) {
@@ -67,6 +66,8 @@ header {
   nav {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
