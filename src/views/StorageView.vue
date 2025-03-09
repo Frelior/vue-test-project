@@ -27,6 +27,7 @@ async function uploadImage() {
 
   const uploadTask = uploadBytesResumable(storageRefInstance, file.value)
 
+  // upload progress and error handling
   uploadTask.on(
     "state_changed",
     (snapshot) => {
